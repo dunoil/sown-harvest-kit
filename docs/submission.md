@@ -1,4 +1,7 @@
-# Competition submission — DRAFT (do not post without Duan's approval)
+# Competition submission — POSTED 18 Nov 2026
+
+Live: https://github.com/hyper-elements/hyper-elements/discussions/257 (Discussion #257, Challenge Submissions)
+Repository: https://github.com/dunoil/sown-harvest-kit
 
 Target: GitHub Discussions → **Challenge Submissions** in `hyper-elements/hyper-elements`
 Form fields verified from live submissions on 18 Nov 2026.
@@ -49,6 +52,6 @@ One engine doing the work the library was built for, not four templates with a s
 No hosted preview. `examples/` in the repository contains the box email (HTML + plain text), the box page, the packing slips as a PDF and the recipe card PNG, all from the demo run — and `docs/` holds screenshots of every output, including the email as Outlook and Gmail render it.
 
 ### Submission confirmation
-- [ ] I have starred the Hyper Elements repository.  ← only tick after Duan stars it himself / approves
-- [ ] My repository is public and contains the complete source code and required README.
-- [ ] My submission meets the requirements of the selected challenge.
+- [x] I have starred the Hyper Elements repository. (done 18 Nov 2026, star count 476 → 477)
+- [x] My repository is public and contains the complete source code and required README.
+- [x] My submission meets the requirements of the selected challenge.
