@@ -20,7 +20,7 @@ Validate every template, fix errors, review warnings, and inspect outline() befo
    Never set body text in a bright harvest colour — contrast fails on paper.
 8. Every template default-exports its component and sets PreviewProps,
    so `npx hyper-elements check templates/` keeps working.
-9. The gate runs first. scripts/check.ts (or the gate inside make-boxes.ts)
+9. The gate runs first. scripts/check.tsx (or the gate inside make-boxes.tsx)
    must pass before any batch render. Never delete the gate to make a run pass.
 10. Subscriber generation is deterministic. No Date.now(), no Math.random()
     in src/data/harvest.ts — a corrections run must re-render only changed boxes.

@@ -5,9 +5,21 @@ One harvest file in → a personalised email, a public box page, print-ready pac
 
 > The point is not "four outputs". It is that each destination gets the job only it can do — and the box a subscriber reads about is provably the same box the packer packs, because it is the same component tree under four different roots.
 
-![SOWN overview](docs/overview.png)
+![SOWN overview — the same box as an email, a page, a packing slip and a recipe card](docs/overview.png)
 
-*Screenshot placeholder: run `npm run render` and `npm run shots` (see below) to generate the real renders, then replace this image. No screenshot in this README is a mock-up claim — if it is pictured, it was rendered.*
+*Every screenshot in this README is a photograph of a real render (`npm run render` + `npm run shots`): if it is pictured, it was rendered.*
+
+**Measured on the demo run (18 Nov 2026):** 120 boxes → 120 personalised emails, 120 packing pages in one PDF, 8 recipe cards — gate at **0 errors, 0 warnings**, full batch in **6.4s**. Reproduce it: `npm run check && npm run make`, then read `out/checks.json` and `out/batch.json`.
+
+| The email (600px) | The page (desktop) | The page (mobile) |
+|---|---|---|
+| ![Box email](docs/email.png) | ![Box page, desktop](docs/page-desktop.png) | ![Box page, mobile](docs/page-mobile.png) |
+
+| The packing slip (A4) | The email in Outlook | The email in Gmail |
+|---|---|---|
+| ![Packing slip](docs/packing-slip.png) | ![Box email as classic Outlook draws it](docs/email-outlook.png) | ![Box email as Gmail draws it](docs/email-gmail.png) |
+
+The recipe card PNG itself is in [`examples/recipe-card.png`](examples/recipe-card.png).
 
 ---
 

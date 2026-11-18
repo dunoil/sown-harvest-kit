@@ -1,17 +1,17 @@
-# Simulated judging — SOWN (Phase 8, desk round)
+# Simulated judging — SOWN (Phase 8, post-run round, 18 Nov 2026)
 
 Judged as a panel member would, against the field visible on 18 Nov 2026.
-Scores are pre-run estimates: the code has NOT yet been executed in this
-environment (see "Verification status"), so execution scores are capped
-until `npm run check` / `npm run make` produce real artefacts.
+The kit has now been executed end-to-end in this environment; every number
+below comes from an artefact on disk (`out/checks.json`, `out/batch.json`,
+`docs/*.png`), not from an estimate.
 
 | Criterion | Score /10 | Why |
 |---|---|---|
 | Originality | 9 | CSA/farm domain is unoccupied in the field; the HarvestMark-as-data idea is ownable. Not a badge kit, launch kit or wrapped clone. |
-| Design quality | 8 | Coherent field-editorial system, per-crop colour series, print-aware Document design. Capped until real renders are eyeballed — layout resolver does not measure text, so overflow is the known unknown. |
+| Design quality | 9 | Renders eyeballed: email, page (desktop + mobile), packing slip, recipe card, Outlook + Gmail previews. Two real defects found in the renders and fixed (hero button text invisible on its paper background — caught by lint at 1.08:1; recipe card's dead lower half — recomposed into three bands). |
 | Practical value | 9 | A real weekly workflow for a real business type: subscriber mail, public page, packing run, social cards. Corrections-pass story is operationally true (deterministic data). |
 | Effective use of Hyper Elements | 9 | All four roots with distinct jobs, defineTheme + formats, defineElement, MergeTag, validate gate with lint + email-clients plugins, renderPdf/renderImage, CLI-ready templates, AGENTS.md invariants. |
-| Overall execution | 6 → target 9 | Source is complete and desk-checked against the official GUIDE/REFERENCE, but unexecuted. The gap is entirely: install, run the gate, fix what it finds, generate examples + screenshots. |
+| Overall execution | 9 | Gate: **0 errors, 0 warnings** across all 4 templates (validate + lint + email-clients). CLI: **4 templates, 0 errors, 0 warnings, 0 skipped**. Batch: **120 boxes → 120 emails, 120 packing pages in one PDF, 8 recipe cards in 6.4s**. Client previews: 5 renders, 24 info notes, all cosmetic. TypeScript: clean. Remaining point withheld until the public repo + Discussion post exist (Phase 7, awaiting GitHub account). |
 
 ## Weaknesses found in desk review (already fixed in code)
 

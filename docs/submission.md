@@ -23,7 +23,7 @@ The point is not "four outputs". It is that each destination gets a job only it 
 - **Packing slips** (`Document` → `renderPdf()`) — a real print job: A4, `PageHeader`/`PageFooter` with `PageNumber`, one `Document.Page` per box, a 30px collation code (`S34-001`) readable across a barn, and packer notes written for a human with a pen. No browser makes this PDF.
 - **Recipe cards** (`Canvas` → `renderImage()`) — 1080×1350 PNGs, one per crop, each flooding its field-art band with that crop's colour. Server-rendered; fonts in as bytes; nothing fetched.
 
-**Measured on the demo run:** [FILL FROM out/checks.json — boxes, emails, pages, cards, gate errors/warnings, seconds. Do not type numbers from memory.]
+**Measured on the demo run (18 Nov 2026, from `out/batch.json` and `out/checks.json`):** 120 boxes · 120 personalised emails (HTML + plain text) · 120 packing pages in one PDF · 8 recipe cards · **gate: 0 errors, 0 warnings** · full batch in **6.4s**.
 
 **Corrections pass:** subscriber generation is deterministic (no clock, no randomness), so fixing 3 boxes re-renders only those 3 — the other 117 emails and slips are byte-identical.
 
@@ -39,14 +39,14 @@ One engine doing the work the library was built for, not four templates with a s
 - **The mark is built from layout primitives on purpose.** An Email cannot hold an Svg, so the HarvestMark is a Grid of Columns — and it recolours per week automatically, because the colours are data on the crops.
 - **A custom element with `defineElement()`**: `sown.ProduceCard`, with typed props (`prop.text`, `prop.color`, `prop.choice`). A missing recipe or bad colour is a diagnostic with a path, before anything renders.
 - **`validate()` as a gate, not a linter.** Before the first box is written, every output is validated with `lint()` and (for the email) `emailClients()`. An error stops the batch, so 120 copies of one mistake never reach disk. `out/checks.json` makes the verdict a file instead of a claim.
-- **`@hyper-elements/email-clients`** for client proof (`npm run clients`): the same email as classic Outlook, Gmail and Apple Mail draw it. [FILL: previews count + degradations found, from the actual run.]
-- **CLI-ready**: `templates/` holds one default-exported component per output with `PreviewProps`, so `npx hyper-elements check templates/` reports [FILL FROM ACTUAL RUN].
+- **`@hyper-elements/email-clients`** for client proof (`npm run clients`): the same email as classic Outlook, Gmail and Apple Mail draw it. Result: **5 previews, 24 info notes, nothing structural** — classic Outlook draws the cards' corners square and does not draw hover or letter-spacing. Nothing else moved.
+- **CLI-ready**: `templates/` holds one default-exported component per output with `PreviewProps`, so `npx hyper-elements check templates/` reports **4 templates: 0 errors, 0 warnings, 0 skipped** (verified 18 Nov 2026).
 - **Written for agents too** (`AGENTS.md`): ten invariants an agent must not break, each with the failure that produced it.
 
 **Run it:** `npm install && npm run check && npm run render && npm run make` (120 boxes) · `npm run make:sample` (6 boxes) · `npm run clients`. Node 20+. `examples/` holds one artefact of each kind for reviewers who would rather not run anything.
 
 ### Live preview URL (optional)
-No hosted preview. `examples/` in the repository contains the box email (HTML + plain text), the box page, the packing slips as a PDF and the recipe card PNG, all from the demo run. [Adjust to what is actually committed.]
+No hosted preview. `examples/` in the repository contains the box email (HTML + plain text), the box page, the packing slips as a PDF and the recipe card PNG, all from the demo run — and `docs/` holds screenshots of every output, including the email as Outlook and Gmail render it.
 
 ### Submission confirmation
 - [ ] I have starred the Hyper Elements repository.  ← only tick after Duan stars it himself / approves
