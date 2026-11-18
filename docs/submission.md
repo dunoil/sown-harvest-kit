@@ -28,7 +28,7 @@ The point is not "four outputs". It is that each destination gets a job only it 
 **Corrections pass:** subscriber generation is deterministic (no clock, no randomness), so fixing 3 boxes re-renders only those 3 — the other 117 emails and slips are byte-identical.
 
 ### Public GitHub repository URL
-[https://github.com/<account>/sown-harvest-kit — after Duan approves publishing]
+https://github.com/dunoil/sown-harvest-kit
 
 ### How did you use Hyper Elements?
 
