@@ -30,6 +30,6 @@ below comes from an artefact on disk (`out/checks.json`, `out/batch.json`,
 
 ## Verification status (honest)
 
-- ✅ API usage desk-checked line-by-line against the official docs, GUIDE and REFERENCE fetched 18 Nov 2026 (roots, styles, themes, defining elements, PDF and Image outputs).
-- ⏳ NOT yet run: `npm install`, `npm run check`, `npm run render`, `npm run make`, screenshots. This environment session followed the brief's browser/computer-only, no-terminal constraint for the build itself; the run step needs Duan's go-ahead on how to execute (his machine, or lifting the constraint for this project).
-- ⏳ No GitHub repository created, nothing starred, nothing submitted — per instructions, external publishing waits for Duan's approval.
+- ✅ Executed 18 Nov 2026 after Duan's go-ahead ("Tuntaskan saja"): `npm install` (note: `@hyper-elements/cli` is v0.2.x and `@hyper-elements/lint` is v0.1.x — the 0.4 line in the first package.json draft did not exist; GUIDE id in the installed package matches the official skill, 7a571fdc), `npm run check` (0/0), `npx hyper-elements check templates/` (0/0/0), `npm run render`, `npm run clients` (5 previews), `npm run make` (120 boxes, 6.4s), `npm run shots` (6 screenshots of the real renders), `npx tsc --noEmit` (clean).
+- ✅ Local git repository initialised with the full history of the build.
+- ⏳ Public GitHub repository, star and Discussion submission: prepared (docs/submission.md is filled with the real numbers) but not yet posted — no GitHub account is signed in on this machine, and creating one needs an email Duan controls for the verification code.
